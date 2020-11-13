@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 2  Írasd ki egy tetszőleges elemszámú, 
+        //csak egész számokat tartalmazó tömb legnagyobb elemét!
+        'use strict';
+        const intArr = [456, 36, 789, 98, 9, 24];
+        let max = intArr[0];
+        for (let i = 1; i < intArr.length; i += 1) {
+            if (intArr[i] > max) {
+                max = intArr[i];
+            }
+        }
+        console.log(max);
+    </script>
+
+
+</body>
+
+</html>
