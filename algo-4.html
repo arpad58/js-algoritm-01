@@ -9,18 +9,19 @@
 
 <body>
     <script>
-        // 3  Írasd ki egy tetszőleges elemszámú, csak egész számokat tartalmazó tömb átlagát!
+        'use strict';
+        // 4  Írasd ki egy tetszőleges elemszámú, csak egész számokat tartalmazó tömb összegét!
+
         'use strict';
 
         let intArr = [456, 36, 789, 98, 9, 24];
-        let average = 0;
+        let sum = 0;
         for (let i = 0; i < intArr.length; i += 1) {
-            average = average + intArr[i] / intArr.length; 
+            sum = sum + intArr[i]; 
         }
-        console.log(average);               //  235.33333333333334
+        console.log(sum);                   // 1412
 
     </script>
-
 </body>
 
 </html>
