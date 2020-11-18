@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 2  Írasd ki egy tetszőleges elemszámú, 
+        //csak egész számokat tartalmazó tömb legnagyobb elemét!
+
+        'use strict';
+
+        // Tömb Legnagyobb eleme  -  getMaxElementFromAnArr
+
+        function getMaxElementFromAnArr(arr) {
+            let max = arr[0];
+            for (let i = 1; i < arr.length; i += 1) {
+                if (arr[i] > max) {
+                    max = arr[i];
+                }
+            }
+            return max;
+        }
+
+        console.log(getMaxElementFromAnArr([1, -10, 2, -100, 3]));    // 3
+        console.log(getMaxElementFromAnArr([11, 7, 2, 32, 343]));    // 343
+
+    </script>
+
+</body>
+
+</html>

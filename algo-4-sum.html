@@ -9,19 +9,25 @@
 
 <body>
     <script>
-        'use strict';
         // 4  Írasd ki egy tetszőleges elemszámú, csak egész számokat tartalmazó tömb összegét!
 
         'use strict';
 
-        let intArr = [456, 36, 789, 98, 9, 24];
-        let sum = 0;
-        for (let i = 0; i < intArr.length; i += 1) {
-            sum = sum + intArr[i];
+        // Tömb összege  -  getSumArray
+
+        function getSumArray(arr) {
+            let sum = 0;
+            for (let i = 0; i < arr.length; i += 1) {
+                sum += arr[i];
+            }
+            return sum;
         }
-        console.log(sum);                   // 1412
+
+        console.log(getSumArray([2, 9, 33, 123]));    // 167
+
 
     </script>
+
 </body>
 
 </html>
