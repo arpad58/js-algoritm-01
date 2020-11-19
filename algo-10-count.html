@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 10  Írd ki, hogy egy tetszőlegese elemszámú, 
+        // bármilyen típusú elemeket tartalmazó tömb 
+        // (feltételezzük, hogy beágyazott tömböt, objektumot nem tartalmaz) 
+        // hányszor tartalmazza a 23-as számot!
+
+        const arr = [18, 32, 23, 9, 25, 27, 23];
+
+        function counter(arr, search) {
+            let count = 0;
+            for (let i = 0; i < arr.length; i += 1) {
+                if (arr[i] === search) {
+                    count += 1;
+                }
+            }
+            return count;
+        }
+
+        const search = 23;
+        console.log(counter(arr, search));    //  2
+
+    </script>
+
+</body>
+
+</html>
