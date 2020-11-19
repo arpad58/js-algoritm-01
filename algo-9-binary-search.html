@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 9  Írd ki (igen vagy nem), hogy egy tetszőlegese elemszámú, 
+        // bármilyen típusú elemeket tartalmazó tömb (feltételezzük, 
+        // hogy beágyazott tömböt, objektumot, egyéb iterálható elemet nem tartalmaz)
+        // tartalmazza-e a 23-as számot! Használj logaritmikus keresést!
+        // Nézz utána mi az, milyen feltételei vannak, és hogyan valósítható meg!
+
+        'use strict';
+
+        const arr = [3, 23, 48, 12, 55, 99, 667, 32];
+
+        function bubbleSort(arr) {
+            let swapped;
+            do {
+                swapped = false;
+                for (let i = 0; i < arr.length - 1; i += 1) {
+                    if (arr[i] > arr[i + 1]) {
+                        let temp = arr[i];
+                        arr[i] = arr[i + 1];
+                        arr[i + 1] = temp;
+                        swapped = true;
+                    }
+                }
+            } while (swapped)
+            return arr;
+        }
+
+        const sortedArray = bubbleSort(arr);
+        console.log(sortedArray);          //    (8) [3, 12, 23, 32, 48, 55, 99, 667]
+
+        function binarySearch(arr, search) {
+            let start = 0;
+            let end = arr.length - 1;
+            while (start <= end) {
+                let mid = Math.floor((start + end) / 2);
+                if (arr[mid] === search) {
+                    return 'igen';
+                }
+                else if (arr[mid] < search) {
+                    start = mid + 1;
+                }
+                else {
+                    end = mid - 1;
+                }
+            }
+            return 'nem';
+        }
+
+        const search = 23;
+        console.log(binarySearch(sortedArray, search));
+
+    </script>
+
+</body>
+
+</html>
